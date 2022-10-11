@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_detail_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="MergeRootFrame">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/detail_toolbar"
+        android:background="@color/design_default_color_primary"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:layout_width="48dp"
+            app:tint="@android:color/white"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_height="48dp"
+            android:id="@+id/action_back"/>
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.Material3.ActionBar.Title"
+            />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:paddingTop="?attr/actionBarSize"
+        android:id="@+id/item_detail_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/item_detail"
+            style="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/container_horizontal_margin"
+            android:paddingTop="16dp"
+            android:paddingEnd="@dimen/container_horizontal_margin"
+            android:paddingBottom="16dp"
+            android:textIsSelectable="true"
+            tools:context="tigner.miguanda.spacexdata.detail.DetailFragment" />
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
